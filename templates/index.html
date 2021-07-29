@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        html {height: 100%}
+        body {height: 100%; margin: 0; padding: 0 }
+    </style>
+    <title>Simple Map</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwkueop1CpW4k86dgQjqXVM8Nd4EWk78Q
+    &callback=initMap&libraries=&v=weekly"</script>
+
+    <script type = "text/javascript">
+        function initialize(){
+            var mapOptions = {
+                center: new google.maps.LatLng(-34.397, 150/644),
+                zoom: 8,
+                mapTypeID: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions)
+        }
+    </script>
+</head>
+<body onload="initialize()">
+    <div id="map" style = " height: 100%"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+        <!-- <center>
+            <h1 style="color:red"> hello world </h1>
+            <h3><a href="/add">发布留言</a> </h3>
+            <table border="1" width="800">
+                <tr>
+                    <th> ID</th>
+                    <th> name</th>
+                    <th> Parents ID</th>
+                    <th> status</th>
+                    <th> Time</th>
+                </tr>
+                {% for i in data %}
+                <tr>
+                    <td>{{ i.ID }}</td>
+                    <td>{{ i.Name }}</td>
+                    <td>{{ i.Parents }}</td>
+                    <td>{{ i.Status }}</td>
+                    <td>{{ i.Time }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+         </center> -->
+</body>
+</html>
